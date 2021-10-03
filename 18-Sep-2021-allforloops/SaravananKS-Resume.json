@@ -1,0 +1,46 @@
+{
+  "basics": {
+    "name": "Saravanan KS",
+    "email": "saravananks143@gmail.com",
+    "phone": "8148512345",
+    "degree": "B.Sc(CS)",
+    "location": {
+      "address": "Kamarajar Salai",
+      "postalCode": "625009",
+      "city": "Madurai"
+    }
+  },
+  "work": [
+    {
+      "company": "NIIT Pvt Ltd",
+      "position": "Senior Software Engineer"
+    }
+  ],
+  "education": [
+    {
+      "institution": "Sourashra Colledge",
+      "area": "Madurai",
+      "studyType": "Regular",
+      "startDate": "2007-06-05",
+      "endDate": "2010-06-05",
+      "courses": "Computer Science (UG)"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Technical",
+      "level": "Intermediate",
+      "keywords": [
+        "javascript", "html", "css", "scss"
+      ]
+    }
+  ],
+  "interests": [
+    {
+      "name": "Music",
+      "keywords": [
+        "ARR", "U1", "Raja"
+      ]
+    }
+  ]
+}

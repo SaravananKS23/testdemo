@@ -1,0 +1,43 @@
+Problem:
+Write a function called “addFive”.
+Given a number, “addFive” returns 5 added to that number.
+Code:
+var num = 10;
+function addFive(num)
+{
+    console.log(num+5);
+}
+var result = addFive(num);
+
+Problem:
+
+Write a function called “getOpposite”.
+Given a number, return its opposite
+
+Input:
+
+getOpposite(5);
+getOpposite(0);
+getOpposite(-5);
+getOpposite(“5a”);
+getOpposite(5.5);
+
+Output:
+
+-5
+0
+5
+-1
+-1
+
+var num = 5;
+function getOpposite(num)
+{
+if((num%1!==0)===false&&num>0)
+{
+       console.log(-num);
+}
+else{console.log(-1);}     
+}
+var result = getOpposite(num);
+    

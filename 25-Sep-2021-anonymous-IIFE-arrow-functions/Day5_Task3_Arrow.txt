@@ -1,0 +1,84 @@
+1. Do the below programs in anonymous function & IIFE
+	a.Print odd numbers in an array
+		Arrow Function
+			var result  = (arr)=>{
+			var temp = [];
+			for (var i=0;i<arr.length;i++)
+			{
+				if (arr[i]%2!==0)
+				{
+					temp.push(arr[i]);
+				}
+			}
+			console.log(temp.join(" "));
+			}
+			var arr = [2,5,4,13,1,9,3,7];
+			result(arr);
+
+	b. Convert all the strings to title caps in a string array
+		Arrow Function
+			let result = (str)=>{
+			for (var i=0;i<str.length;i++)
+			{
+				str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1).toLowerCase();
+			}
+			return str.join(' ');
+			};
+			var str = ["RAMu","SHIVA","somu","sArAvAnAn"];
+			console.log(result(str));
+
+
+	c. Sum of all numbers in an array
+		Arrow Function
+			var result = (arr)=>{
+			var temp = 0;
+			for (var i=0;i<arr.length;i++)
+				{
+					temp = temp + (arr[i]);
+				}
+			console.log(temp);
+			};
+			var arr = [99,101,2,5,4,13,1,9,3,7];
+			result(arr);
+
+
+	d. Return all the prime numbers in an array
+		Arrow Function
+			let result = (arr)=>{
+			let prime=[];
+			for (i=0;i<arr.length;i++)
+			{
+				if(arr[i]%2!==0&&arr[i]>=2||arr[i]==2)
+				{
+						prime.push(arr[i]);
+				}
+			}
+			console.log(prime.join(","));    
+			};
+			let arr =[0,1,2,3,4,5,6,7,8,9];
+			result(arr);
+		
+
+	e. Return all the palindromes in an array
+		Arrow Function
+			var result = (arr)=>{
+			var temp = "";
+			var temp1 = [];
+			var arr1;
+			for (var j=0;j<arr.length;j++)
+			{
+			temp = "";
+			arr1=arr[j].toString().toLowerCase().split("");
+			for(var i=arr1.length-1;i>=0;i--)
+			{
+					temp += arr1[i];
+			}
+			if (temp==arr1.join("").toLowerCase())
+			{
+				temp1.push(arr1.join(""));
+			}
+			}    
+			console.log(temp1.join(" "));
+			}
+				var arr=["six","Gig","mam","hosp","dad","madam"];
+			result(arr);

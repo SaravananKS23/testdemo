@@ -1,0 +1,233 @@
+1. Do the below programs in anonymous function & IIFE
+	a.Print odd numbers in an array
+		Ananymous Function
+			var result = function (arr){
+			var temp = [];
+			for (var i=0;i<arr.length;i++)
+			{
+				if (arr[i]%2!==0)
+				{
+					temp.push(arr[i]);
+				}
+			}
+			console.log(temp.join(" "));
+			};
+			var arr = [2,5,4,13,1,9,3,7];
+			result(arr);
+
+		IIFE
+			(function(arr){
+			var temp = [];
+			for (var i=0;i<arr.length;i++)
+			{
+				if (arr[i]%2!==0)
+				{
+					temp.push(arr[i]);
+				}
+			}
+			console.log(temp.join(" "));
+			})([2,5,4,13,1,9,3,7]);
+
+	b. Convert all the strings to title caps in a string array
+		Ananymous Function
+			let result = function(str){
+			for (var i=0;i<str.length;i++)
+			{
+				str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1).toLowerCase();
+			}
+			return str.join(' ');
+			};
+			var str = ["RAMu","SHIVA","somu","sArAvAnAn"];
+			console.log(result(str));
+
+		IIFE
+			((str)=>{
+			for (var i=0;i<str.length;i++)
+			{
+				str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1).toLowerCase();
+			}
+			console.log(str.join(' '));
+			})(["RAMu","SHIVA","somu","sArAvAnAn"]);
+
+
+	c. Sum of all numbers in an array
+		Ananymous Function
+			var result = function (arr){
+			var temp = 0;
+			for (var i=0;i<arr.length;i++)
+				{
+					temp = temp + (arr[i]);
+				}
+			console.log(temp);
+			};
+			var arr = [99,101,2,5,4,13,1,9,3,7];
+			result(arr);
+
+		IIFE
+			((arr)=>{
+			var temp = 0;
+			for (var i=0;i<arr.length;i++)
+				{
+					temp = temp + (arr[i]);
+				}
+			console.log(temp);
+			})([99,101,2,5,4,13,1,9,3,7]);
+
+
+	d. Return all the prime numbers in an array
+		Ananymous Function
+			let result = function(arr){
+			let prime=[];
+			for (i=0;i<arr.length;i++)
+			{
+				if(arr[i]%2!==0&&arr[i]>=2||arr[i]==2)
+				{
+						prime.push(arr[i]);
+				}
+			}
+			console.log(prime.join(","));    
+			};
+			let arr =[0,1,2,3,4,5,6,7,8,9];
+			result(arr);
+		
+		IIFE
+			((arr)=>{
+			let prime=[];
+			for (i=0;i<arr.length;i++)
+			{
+				if(arr[i]%2!==0&&arr[i]>=2||arr[i]==2)
+				{
+						prime.push(arr[i]);
+				}
+			}
+			console.log(prime.join(","));    
+			})([0,1,2,3,4,5,6,7,8,9]);
+
+	e. Return all the palindromes in an array
+			Ananymous Function
+				var result = function(arr){
+				var temp = "";
+				var temp1 = [];
+				var arr1;
+				for (var j=0;j<arr.length;j++)
+				{
+				temp = "";
+				arr1=arr[j].toString().toLowerCase().split("");
+				for(var i=arr1.length-1;i>=0;i--)
+				{
+						temp += arr1[i];
+				}
+				if (temp==arr1.join("").toLowerCase())
+				{
+					temp1.push(arr1.join(""));
+				}
+				}    
+				console.log(temp1.join(" "));
+				}
+					var arr=["six","Gig","mam","hosp","dad","madam"];
+				result(arr);
+
+			IIFE
+				((arr)=>{
+				var temp = "";
+				var temp1 = [];
+				var arr1;
+				for (var j=0;j<arr.length;j++)
+				{
+				temp = "";
+				arr1=arr[j].toString().toLowerCase().split("");
+				for(var i=arr1.length-1;i>=0;i--)
+				{
+						temp += arr1[i];
+				}
+				if (temp==arr1.join("").toLowerCase())
+				{
+					temp1.push(arr1.join(""));
+				}
+				}    
+				console.log(temp1.join(" "));
+				})(["six","Gig","mam","hosp","dad","madam"]);
+
+	f. Return median of two sorted arrays of same size
+			Ananymous Function
+				var result = function(a1,a2){
+				for (i=0;i<arr2.length;i++)
+				{
+					arr1.push(arr2[i]);
+				}
+				var x = arr1.sort(function(a,b){return a-b});
+				let len = x.length;
+				if(len%2===0)
+				{
+					console.log((x[Math.floor(len/2)-1] + x[Math.ceil(len/2)])/2);
+				}else{
+					console.log(x[Math.floor(len/2)]);
+				}
+				};
+				var arr1 = [6, 7, 8, 9, 10];
+				var arr2 = [1, 2, 3, 4, 5];
+				result(arr1,arr2);    
+
+			IIFE
+				(function (a1,a2){
+				for (i=0;i<a2.length;i++)
+				{
+					a1.push(a2[i]);
+				}
+				var x = a1.sort(function(a,b){return a-b});
+				let len = x.length;
+				if(len%2===0)
+				{
+					console.log((x[Math.floor(len/2)-1] + x[Math.ceil(len/2)])/2);
+				}else{
+					console.log(x[Math.floor(len/2)]);
+				}
+				})([6, 7, 8, 9, 10],[1, 2, 3, 4, 5]);
+
+	g. Remove duplicates from an array
+			Ananymous Function
+				let result = function(arr){
+				var temp=[];
+				for (i=0;i<arr.length;i++)
+				{
+					if (temp.indexOf(arr[i])===-1)
+					{
+						temp.push(arr[i]);
+					}
+				}
+				console.log(temp.join(","));    
+				};
+				var arr = [2,5,2,2,7,4,4,7,4,4];
+				result(arr);    
+
+			IIFE
+				((arr)=>{
+				var temp=[];
+				for (i=0;i<arr.length;i++)
+				{
+					if (temp.indexOf(arr[i])===-1)
+					{
+						temp.push(arr[i]);
+					}
+				}
+				console.log(temp.join(","));    
+				})([2,5,2,2,7,4,4,7,4,4]);
+
+	h. Rotate an array by k times
+			Ananymous Function
+				let result = function(arr, n){
+				var count = arr.length-n;
+				arr.push.apply(arr, arr.splice(0, count));    
+				console.log(arr);    
+				};
+				var arr = [1,2,3,4,5,6,7,8];
+				var n = 2;
+				result(arr,n);
+
+			IIFE
+				((arr, n)=>{
+				var count = arr.length-n;
+				arr.push.apply(arr, arr.splice(0, count));    
+				console.log(arr);    
+				})([1,2,3,4,5,6,7,8],3);
+
